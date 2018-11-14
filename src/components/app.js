@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Nav from './nav';
+import HeroSection from './hero-section';
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -17,6 +18,9 @@ export default class App extends React.Component {
 				<Nav 
 					onLogout={() => this.logout()}
 				/>
+				<main role="main">
+					<HeroSection />
+				</main>
 			</div>
 		);
 	}
