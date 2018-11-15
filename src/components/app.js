@@ -6,6 +6,7 @@ import LoginNav from './login-nav';
 import HeroSection from './hero-section';
 import InfoSection from './info-section';
 import SignupSection from './signup-section';
+import MatchCard from './match-card';
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -21,9 +22,12 @@ export default class App extends React.Component {
 			<Router>
 				<div>
 					<Route 
-						exact path="/all-matches" 
+						path={["/all-matches", "/match", "/profile"]}
 						component={Nav}
 					/>
+					<Route 
+							exact path="/match"
+							component={MatchCard} />
 					<Route 
 						exact path="/" 
 						component={LoginNav}

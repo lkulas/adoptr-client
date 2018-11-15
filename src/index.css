@@ -11,6 +11,11 @@ body {
   line-height: 1.5;
 }
 
+button {
+  margin-top: 10px;
+  padding: 10px;
+}
+
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -38,12 +43,9 @@ nav {
 }
 
 nav ul li {
-  float: right;
+  float: left;
 }
 
-section {
-	border: 1px solid grey;
-	min-height: 200px;
-	margin-bottom: 10px;
-	padding: 10px;
+nav ul li:nth-child(4n) {
+  float: right;
 }
