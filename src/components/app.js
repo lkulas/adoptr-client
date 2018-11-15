@@ -6,7 +6,8 @@ import LoginNav from './login-nav';
 import HeroSection from './hero-section';
 import InfoSection from './info-section';
 import SignupSection from './signup-section';
-import MatchCard from './match-card';
+import MatchSection from './match-section';
+import AllMatchesSection from './all-matches-section';
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -27,7 +28,10 @@ export default class App extends React.Component {
 					/>
 					<Route 
 							exact path="/match"
-							component={MatchCard} />
+							component={MatchSection} />
+					<Route 
+							exact path="/all-matches"
+							component={AllMatchesSection} />
 					<Route 
 						exact path="/" 
 						component={LoginNav}

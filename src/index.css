@@ -11,11 +11,6 @@ body {
   line-height: 1.5;
 }
 
-button {
-  margin-top: 10px;
-  padding: 10px;
-}
-
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -43,9 +38,9 @@ nav {
 }
 
 nav ul li {
-  float: left;
+  float: right;
 }
 
-nav ul li:nth-child(4n) {
-  float: right;
+nav ul li:first-child {
+  float: left;
 }

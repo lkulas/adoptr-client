@@ -4,7 +4,6 @@ import './match-card.css';
 
 export default function MatchCard(props) {
 	return (
-		<section>
 			<div class="card">
 				<img class="card-image" src="https://www.what-dog.net/Images/faces2/main001.jpg" />
 				<p>
@@ -21,10 +20,5 @@ export default function MatchCard(props) {
 					<li>Housebroken</li>
 				</ul>
 			</div>
-			<div class="match">
-				<button type="button">X</button>
-				<button type="button">Heart</button>
-			</div>
-		</section>
 	);
 }
