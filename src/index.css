@@ -28,6 +28,10 @@ nav a {
   color: black;
 }
 
+nav button {
+  float: right;
+}
+
 nav {
   position: fixed;
   top: 0;
