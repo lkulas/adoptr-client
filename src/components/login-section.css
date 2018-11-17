@@ -1,0 +1,12 @@
+.login-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: grey;
+  padding: 10px 30px;
+}
+
+.login-button {
+	float: right;
+}
