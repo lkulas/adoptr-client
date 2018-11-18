@@ -27,3 +27,8 @@ nav ul li {
 nav ul li:first-child {
   float: left;
 }
+
+nav a {
+	text-decoration: none;
+	color: black;
+}
