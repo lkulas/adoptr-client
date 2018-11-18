@@ -1,0 +1,14 @@
+#preference-form {
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#preference-form fieldset {
+	margin-top: 15px;
+}
+
+#preference-form input {
+	margin-left: 15px;
+	margin-right: 5px;
+}

@@ -7,10 +7,10 @@ import './all-matches-page.css';
 
 export default function AllMatchesPage(props) {
 	return (
-		<div>
+		<div className="all-matches">
 			<Nav />
 			<main role="main">
-				<section className="all-matches">
+				<section>
 					<MatchCard />
 					<MatchCard />
 					<MatchCard />

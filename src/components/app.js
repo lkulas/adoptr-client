@@ -6,33 +6,27 @@ import MatchPage from './match-page';
 import AllMatchesPage from './all-matches-page';
 import ProfilePage from './profile-page';
 
-export default class App extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
-	render() {
-		return (
-			<Router>
-				<div>
-					<Route 
-						exact path="/" 
-						component={LandingPage}
-					/>
-					<Route 
-						exact path="/match"
-						component={MatchPage} 
-					/>
-					<Route 
-						exact path="/all-matches"
-						component={AllMatchesPage} 
-					/>
-					<Route 
-						exact path="/profile"
-						component={ProfilePage} 
-					/>
-				</div>
-			</Router>
-		);
-	}
+export default function App(props) {
+	return (
+		<Router>
+			<div>
+				<Route 
+					exact path="/" 
+					component={LandingPage}
+				/>
+				<Route 
+					exact path="/match"
+					component={MatchPage} 
+				/>
+				<Route 
+					exact path="/all-matches"
+					component={AllMatchesPage} 
+				/>
+				<Route 
+					exact path="/profile"
+					component={ProfilePage} 
+				/>
+			</div>
+		</Router>
+	);
 }

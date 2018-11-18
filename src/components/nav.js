@@ -1,23 +1,32 @@
 import React from 'react';
-import {BrowserRouter as Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import './nav.css';
 
 export default function Nav(props) {
 	return (
-		<nav>
-			<ul>
-					<Link to="/match">
-						<li>Find A Pet</li>
-					</Link>
-					<Link to="/">
-						<li>Logout</li>
-					</Link>
-					<Link to="/profile">
-						<li>Profile</li>
-					</Link>
-					<Link to="/all-matches">
-						<li>Saved Matches</li>
-					</Link>
-			</ul>
-		</nav>
+				<nav>
+					<ul>
+						<li>
+							<Link to="/match">
+								Find A Pet
+							</Link>
+						</li>
+						<li>
+							<Link to="/">
+								Logout
+							</Link>
+						</li>
+						<li>
+							<Link to="/profile">
+								Profile
+							</Link>
+						</li>
+						<li>
+							<Link to="/all-matches">
+								Saved Matches
+							</Link>
+						</li>
+					</ul>
+				</nav>
 	);
 }

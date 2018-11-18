@@ -1,4 +1,5 @@
 import React from 'react';
+import './profile-form.css';
 
 export default function ProfileForm(props) {
 	return (

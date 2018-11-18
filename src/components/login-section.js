@@ -20,7 +20,7 @@ export default class LoginSection extends React.Component {
 	render() {
 		return (
 			<div className="login-section">
-				<button className="login-button" onClick={this.toggleHidden.bind(this)}>
+				<button onClick={this.toggleHidden.bind(this)}>
 					Login
 				</button>
 				{!this.state.isHidden && <LoginForm />}
