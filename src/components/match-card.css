@@ -4,7 +4,7 @@
 
 .card {
   border: 2px solid black;
-  width: 30%;
+  width: 25%;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 75px;
@@ -17,6 +17,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  margin-top: 15px;
 }
 
 .card li {

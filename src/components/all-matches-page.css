@@ -1,3 +1,4 @@
 .all-matches section {
-	float: left;
+	margin-right: auto;
+	margin-left: auto;
 }

@@ -3,17 +3,22 @@ import React from 'react';
 import './match-card.css';
 
 export default function MatchCard(props) {
+	const {photo, name, sex, age, breeds} = props.match;
+	const breed = breeds.map((breed, index) => (
+		<li key={index}>
+			{breed} 
+		</li>
+	));
+
 	return (
 		<div className="card">
-			<img alt="" src="https://www.what-dog.net/Images/faces2/main001.jpg" />
+			<img alt="" src={photo} />
 			<p>
-				<span className="name">Rufus</span> (<span className="gender">M</span>),
-				<span className="distance"> 5 mi away</span>
+				<span className="name">{name}</span> (<span className="gender">{sex}</span>), <span className="age">{age}</span>
 			</p>
-			<p>
-				<span className="age">Puppy</span> • 
-				<span className="breed"> Beagle</span>
-			</p>
+			<div className="breed">
+				<ul>{breed}</ul>
+			</div>
 			<ul>
 				<li>Good with children</li>
 				<li>Not good with other dogs</li>
