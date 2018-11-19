@@ -5,6 +5,7 @@ import LandingPage from './landing-page';
 import MatchPage from './match-page';
 import AllMatchesPage from './all-matches-page';
 import ProfilePage from './profile-page';
+import DetailPage from './detail-page';
 
 export default function App(props) {
 	return (
@@ -25,6 +26,10 @@ export default function App(props) {
 				<Route 
 					exact path="/profile"
 					component={ProfilePage} 
+				/>
+				<Route 
+					exact path="/detail/:detailId"
+					component={DetailPage} 
 				/>
 			</div>
 		</Router>
