@@ -1,4 +1,4 @@
-import {UPDATE_PREFERENCES, ADD_MATCH, DELETE_MATCH} from './actions';
+import {UPDATE_PREFERENCES, ADD_MATCH, DELETE_MATCH} from '../actions/adoptr';
 
 const initialState = {
     'savedMatches': [
@@ -56,6 +56,7 @@ const initialState = {
     },
 };
 
-export default (state = initialState, action) => {
+export default function reducer(state = initialState, action) {
     return state;
 };
+

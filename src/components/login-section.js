@@ -7,23 +7,25 @@ export default class LoginSection extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			isHidden: true
+			formIsHidden: true,
+			buttonIsHidden: false
 		};
 	}
 
 	toggleHidden() {
 		this.setState({
-			isHidden: !this.state.isHidden
+			formIsHidden: !this.state.formIsHidden,
+			buttonIsHidden: !this.state.buttonIsHidden
 		});
 	}
 
 	render() {
 		return (
 			<div className="login-section">
-				<button onClick={this.toggleHidden.bind(this)}>
+				{!this.state.buttonIsHidden && <button onClick={this.toggleHidden.bind(this)}>
 					Login
-				</button>
-				{!this.state.isHidden && <LoginForm />}
+				</button>}
+				{!this.state.formIsHidden && <LoginForm />}
 			</div>
 		);
 	}

@@ -8,6 +8,7 @@ export default function DetailPage(props) {
 			<Nav />
 			<main role="main">
 				<section>
+				this.props.match.params.detailId
 				</section>
 			</main>
 		</div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import SignupForm from './signup-form';
+import RegistrationForm from './registration-form';
 
 export default function SignupSection(props) {
 	return (
@@ -8,7 +8,7 @@ export default function SignupSection(props) {
 				<header>
 					<h3>Get Started</h3>
 				</header>
-				<SignupForm />
+				<RegistrationForm />
 			</section>
 		</div>
 	);
