@@ -2,14 +2,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import Nav from './nav';
-import MatchCard from './match-card';
+import SavedMatchCard from './saved-match-card';
 
 import './all-matches-page.css';
 
 export function AllMatchesPage(props) {
 	const savedMatches = props.savedMatches.map((match, index) => (
 		<div key={index}>
-			<MatchCard match={match}/>
+			<SavedMatchCard match={match}/>
 		</div>
 	));
 
@@ -26,7 +26,7 @@ export function AllMatchesPage(props) {
 }
 
 const mapStateToProps = state => ({
-	savedMatches: state.savedMatches
+	savedMatches: state.adoptr.savedMatches
 });
 
 export default connect (mapStateToProps)(AllMatchesPage);

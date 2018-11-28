@@ -1,8 +1,9 @@
 import React from 'react';
+import './info-section.css';
 
 export default function InfoSection(props) {
 	return (
-		<div>
+		<div className="info-section">
 			<section>
 				<header>
 					<h3>Set your preferences</h3>

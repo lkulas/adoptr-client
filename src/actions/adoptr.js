@@ -20,9 +20,6 @@ export const deleteMatch = match => ({
 	match
 });
 
-
-
-
 export const FETCH_PROTECTED_DATA_SUCCESS = 'FETCH_PROTECTED_DATA_SUCCESS';
 export const fetchProtectedDataSuccess = data => ({
     type: FETCH_PROTECTED_DATA_SUCCESS,
