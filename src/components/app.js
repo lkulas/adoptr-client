@@ -6,7 +6,6 @@ import MatchPage from './match-page';
 import AllMatchesPage from './all-matches-page';
 import ProfilePage from './profile-page';
 import DetailPage from './detail-page';
-import Footer from './footer';
 
 export default function App(props) {
 	return (
@@ -32,7 +31,6 @@ export default function App(props) {
 					exact path="/detail/:detailId"
 					component={DetailPage} 
 				/>
-				<Footer />
 			</div>
 		</Router>
 	);

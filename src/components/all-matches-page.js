@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-
 import Nav from './nav';
 import SavedMatchCard from './saved-match-card';
 
@@ -17,9 +16,7 @@ export function AllMatchesPage(props) {
 		<div className="all-matches">
 			<Nav />
 			<main role="main">
-				<section>
-					{savedMatches}
-				</section>
+				{savedMatches}
 			</main>
 		</div>
 	);

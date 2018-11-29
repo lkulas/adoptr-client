@@ -4,9 +4,9 @@ import {Link} from 'react-router-dom';
 
 import './match-card.css';
 
-export function SavedMatchCard(props) {
-	const {photo, name, sex, age, breeds, id} = props;
-	const breed = breeds.map((breed, index) => (
+export default function SavedMatchCard(props) {
+	const {photo, name, sex, age, breeds, id} = props.match;
+	const breedList = breeds.map((breed, index) => (
 		<li key={index}>
 			{breed} 
 		</li>
@@ -22,15 +22,17 @@ export function SavedMatchCard(props) {
 						{name}
 					</Link>
 				</span> 
-				(<span className="gender">
+				(
+				<span className="gender">
 					{sex}
-				</span>), 
+				</span>
+				), 
 				<span className="age">
 					{age}
 				</span>
 			</p>
 			<div className="breed">
-				<ul>{breed}</ul>
+				<ul>{breedList}</ul>
 			</div>
 			<ul>
 				<li>Good with children</li>
@@ -40,9 +42,3 @@ export function SavedMatchCard(props) {
 		</div>
 	);
 }
-
-const mapStateToProps = state => ({
-	savedMatches: state.adoptr.savedMatches
-});
-
-export default connect (mapStateToProps)(SavedMatchCard);
