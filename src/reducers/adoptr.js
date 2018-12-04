@@ -86,22 +86,22 @@ const initialState = {
             {name: 'Senior', label: 'Senior', checked: false}
         ],
         size: [
-            {name: 'Small', label: 'Small', checked: false},
-            {name: 'Medium', label: 'Medium', checked: false},
+            {name: 'Small', label: 'Small', checked: true},
+            {name: 'Medium', label: 'Medium', checked: true},
             {name: 'Large', label: 'Large', checked: false},
             {name: 'Extra large', label: 'Extra Large', checked: false},
         ],
         gender: [
-            {name: 'Male', label: 'Male', checked: false},
-            {name: 'Female', label: 'Female', checked: false}
+            {name: 'Male', label: 'Male', checked: true},
+            {name: 'Female', label: 'Female', checked: true}
         ],
         goodWith: [
             {name: 'Children', label: 'Children', checked: false},
-            {name: 'Dogs', label: 'Dogs', checked: false},
+            {name: 'Dogs', label: 'Dogs', checked: true},
             {name: 'Cats', label: 'Cats', checked: false}
         ],
         care: [
-            {name: 'Housetrained', label: 'Housetrained', checked: false},
+            {name: 'Housetrained', label: 'Housetrained', checked: true},
             {name: 'Special needs', label: 'Special needs', checked: false},
         ]
     },

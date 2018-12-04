@@ -4,7 +4,7 @@ export default function CheckBox({ error, checked, input, ...rest }) {
 	return (
 	  <span>
 	    <span>{input.name}</span>
-	    <input {...input} type="checkbox" checked={input.checked}/>
+	    <input {...input} type="checkbox" checked={checked}/>
 	  </span>
 	)
 };

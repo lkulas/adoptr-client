@@ -1,6 +1,5 @@
 import React from 'react';
-import {reduxForm, Field, SubmissionError, focus, FormSection} from 'redux-form';
-import Input from './input';
+import {reduxForm, Field, SubmissionError, focus} from 'redux-form';
 import Checkbox from './checkbox';
 import {required, nonEmpty, email} from '../validators';
 import {connect} from 'react-redux';
@@ -74,6 +73,8 @@ export class ProfileForm extends React.Component {
           onSubmit={this.props.handleSubmit(values =>
             this.onSubmit(values)
           )}>
+          {successMessage}
+          {errorMessage}
           <div>
             <div>
               <label>Animal Type</label>
