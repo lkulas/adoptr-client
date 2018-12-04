@@ -13,7 +13,7 @@ export default function SavedMatchCard(props) {
 	const idUrl = `/detail/${id}`;
 
 	return (
-		<div className="card">
+		<div className="card col-4">
 			<img alt="" src={photo} />
 			<p>
 				<span className="name">

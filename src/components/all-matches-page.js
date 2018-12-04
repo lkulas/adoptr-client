@@ -7,7 +7,7 @@ import './all-matches-page.css';
 
 export function AllMatchesPage(props) {
 	const savedMatches = props.savedMatches.map((match, index) => (
-		<div key={index}>
+		<div key={index} className="col-3">
 			<SavedMatchCard match={match}/>
 		</div>
 	));
@@ -16,7 +16,9 @@ export function AllMatchesPage(props) {
 		<div className="all-matches">
 			<Nav />
 			<main role="main">
-				{savedMatches}
+				<div className="row">
+					{savedMatches}
+				</div>
 			</main>
 		</div>
 	);

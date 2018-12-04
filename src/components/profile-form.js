@@ -3,6 +3,7 @@ import {reduxForm, Field, SubmissionError, focus} from 'redux-form';
 import Checkbox from './checkbox';
 import {required, nonEmpty, email} from '../validators';
 import {connect} from 'react-redux';
+import './profile-form.css';
 
 export class ProfileForm extends React.Component {
   onSubmit(values) {
@@ -72,11 +73,12 @@ export class ProfileForm extends React.Component {
         <form 
           onSubmit={this.props.handleSubmit(values =>
             this.onSubmit(values)
-          )}>
+          )}
+          id="profile-form">
           {successMessage}
           {errorMessage}
           <div>
-            <div>
+            <div className="label">
               <label>Animal Type</label>
             </div>
             {this.props.preferences.animal.map(({ name, label, checked }) => {
@@ -92,7 +94,7 @@ export class ProfileForm extends React.Component {
             })}
           </div>
           <div>
-            <div>
+            <div className="label">
               <label>Age</label>
             </div>
             {this.props.preferences.age.map(({ name, label, checked }) => {
@@ -108,7 +110,7 @@ export class ProfileForm extends React.Component {
             })}
           </div>
           <div>
-            <div>
+            <div className="label">
               <label>Size</label>
             </div>
             {this.props.preferences.size.map(({ name, label, checked }) => {
@@ -124,7 +126,7 @@ export class ProfileForm extends React.Component {
             })}
           </div>
           <div>
-            <div>
+            <div className="label">
               <label>Gender</label>
             </div>
             {this.props.preferences.gender.map(({ name, label, checked }) => {
@@ -140,7 +142,7 @@ export class ProfileForm extends React.Component {
             })}
           </div>
           <div>
-            <div>
+            <div className="label">
               <label>Good With</label>
             </div>
             {this.props.preferences.goodWith.map(({ name, label, checked }) => {
@@ -156,7 +158,7 @@ export class ProfileForm extends React.Component {
             })}
           </div>
           <div>
-            <div>
+            <div className="label">
               <label>Care</label>
             </div>
             {this.props.preferences.care.map(({ name, label, checked }) => {
