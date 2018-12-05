@@ -3,7 +3,7 @@ import RegistrationForm from './registration-form';
 
 export default function SignupSection(props) {
 	return (
-		<div>
+		<div className="signup-section">
 			<section>
 				<header>
 					<h3>Get Started</h3>

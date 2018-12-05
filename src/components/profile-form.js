@@ -53,6 +53,7 @@ export class ProfileForm extends React.Component {
   }
 
   render() {
+      const {initialValues} = this.props;
       let successMessage;
       if (this.props.submitSucceeded) {
           successMessage = (

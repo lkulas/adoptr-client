@@ -5,33 +5,23 @@ import './match-card.css';
 
 export default function SavedMatchCard(props) {
 	const {photo, name, sex, age, breeds, id} = props.match;
-	const breedList = breeds.map((breed, index) => (
-		<li key={index}>
-			{breed} 
-		</li>
-	));
 	const idUrl = `/detail/${id}`;
 
 	return (
 		<div className="card col-4">
-			<img alt="" src={photo} />
+			<div class="photo">
+				<img alt="" src={photo} />
+			</div>
 			<p>
 				<span className="name">
 					<Link to={idUrl}>
 						{name}
 					</Link>
-				</span> 
-				(
-				<span className="gender">
-					{sex}
-				</span>
-				), 
-				<span className="age">
-					{age}
-				</span>
+				</span> (<span className="gender">{sex}</span>), 
+				<span className="age"> {age}</span>
 			</p>
 			<div className="breed">
-				<ul>{breedList}</ul>
+				<ul>{breeds[0]}</ul>
 			</div>
 			<ul>
 				<li>Good with children</li>

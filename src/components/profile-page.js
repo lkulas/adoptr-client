@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Nav from './nav';
+import { Values } from 'redux-form-website-template';
 import ProfileForm from './profile-form';
 import './profile-page.css';
 
