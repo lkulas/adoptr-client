@@ -13,7 +13,7 @@ export function MatchCard(props) {
 			<img alt="" src={photo} />
 			<p>
 				<span className="name">
-					<Link to={idUrl}>{name}</Link>
+					{name}
 				</span> (<span className="gender">{sex}</span>), <span className="age">{age}</span>
 			</p>
 			<div className="breed">

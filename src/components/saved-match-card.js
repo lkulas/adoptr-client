@@ -9,7 +9,7 @@ export default function SavedMatchCard(props) {
 
 	return (
 		<div className="card col-4">
-			<div class="photo">
+			<div className="photo">
 				<img alt="" src={photo} />
 			</div>
 			<p>
