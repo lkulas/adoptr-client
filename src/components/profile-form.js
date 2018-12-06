@@ -53,7 +53,6 @@ export class ProfileForm extends React.Component {
   }
 
   render() {
-      const {initialValues} = this.props;
       let successMessage;
       if (this.props.submitSucceeded) {
           successMessage = (
@@ -144,25 +143,9 @@ export class ProfileForm extends React.Component {
           </div>
           <div>
             <div className="label">
-              <label>Good With</label>
+              <label>Health</label>
             </div>
-            {this.props.preferences.goodWith.map(({ name, label, checked }) => {
-              return (
-                <Field
-                  type="checkbox"
-                  name={name}
-                  component={Checkbox}
-                  label={label}
-                  checked={checked}              
-                />
-              );
-            })}
-          </div>
-          <div>
-            <div className="label">
-              <label>Care</label>
-            </div>
-            {this.props.preferences.care.map(({ name, label, checked }) => {
+            {this.props.preferences.health.map(({ name, label, checked }) => {
               return (
                 <Field
                   type="checkbox"

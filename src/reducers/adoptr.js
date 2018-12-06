@@ -47,7 +47,8 @@ const initialState = {
                 email: 'pf@westcoastboxerrescue.org',
                 city: 'Alameda',
                 zip: '94501',
-                address1: ''
+                address1: '',
+                name: 'West Coast Boxer Rescue'
             },
             photo: 'http://photos.petfinder.com/photos/pets/38308734/1/?bust=1496817083&width=500&-x.jpg',
             description: 'Sample description'
@@ -121,9 +122,9 @@ const initialState = {
             {name: 'Dogs', label: 'Dogs', checked: true},
             {name: 'Cats', label: 'Cats', checked: false}
         ],
-        care: [
-            {name: 'Housetrained', label: 'Housetrained', checked: true},
-            {name: 'Special needs', label: 'Special needs', checked: false},
+        health: [
+            {name: 'Spayed/neutered', label: 'Spayed/neutered', checked: true},
+            {name: 'Has vaccinations', label: 'Has vaccinations', checked: false},
         ]
     },
     match: {

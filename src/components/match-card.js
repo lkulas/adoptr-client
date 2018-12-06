@@ -1,28 +1,32 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
+import {normalizeSize, normalizeHealth, normalizeGender} from '../normalizeTargets';
 
 import './match-card.css';
 
 export function MatchCard(props) {
-	const {photo, name, sex, age, breeds, id} = props.match;
-	const idUrl = `/detail/${id}`;
+	const {photo, name, sex, age, breeds, size, options} = props.match;
+
+	const health = options.map((pet, index) => {
+		return (
+			<li key={index}>{normalizeHealth(pet)}</li>
+		);
+	});
 
 	return (
 		<div className="card">
 			<img alt="" src={photo} />
 			<p>
-				<span className="name">
-					{name}
-				</span> (<span className="gender">{sex}</span>), <span className="age">{age}</span>
+				<h1 className="name">{name}</h1>
+				<span className="age">{age}</span>
+				<span className="gender"> {normalizeGender(sex)}</span>
 			</p>
 			<div className="breed">
 				<ul>{breeds[0]}</ul>
 			</div>
 			<ul>
-				<li>Good with children</li>
-				<li>Not good with other dogs</li>
-				<li>Housebroken</li>
+				<li className="size">{normalizeSize(size)}</li>
+				{health}
 			</ul>
 		</div>
 	);

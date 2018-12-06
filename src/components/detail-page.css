@@ -1,0 +1,13 @@
+.detail-page img {
+	width: 350px;
+	padding: 10px;
+}
+
+.detail-page main {
+	margin-top: 40px;
+}
+
+.detail-page h2 {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
