@@ -33,3 +33,8 @@
   padding-left: auto;
   padding-right: auto;
 }
+
+.card h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+}

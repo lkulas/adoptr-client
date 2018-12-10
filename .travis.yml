@@ -2,11 +2,11 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
+  - node_modules
 env:
-  - CI=true
+- CI=true
 deploy:
   provider: heroku
   api_key:
-    secure: "83285b7e-cabd-41fc-b9fd-e7cac5de303a"
+    secure: hp1HhRFBAIu+9lciPU3oja4l1Kn0P/olOSUQNzQFd7uy7WSwgld9ih1xwdGwlbOThkt7HDq/1HQil+Q7QA49A9mqY063CjpWkL5RpjtIeQFAYhEuhOXF1aE+uwxq+j5s7JbE8er9N0Rw6kKsWeJZTeQ8/VlvEfa/nTNLrR4ijomvXamejWq8aj5sXckznUGYXUd9eTAVB2RGHPljnNty8ocxKVv1cUBmnorYq7WCZz/GtbxOu7cVS8s5kh302UpEwPZKfX6ljVruOqm400znQRzxGRZRAAfWdXxj9nWPzUpsXgtGUJ4jder0PlT1fIJykQt9EDIPsF1KsSJnmJIR68q5SRTyu2dThHy/hTFRsN+CmLbEkHBaTSxhjpQS6JiRj2IwTVR3k5AjlveZ2Cxu1TwJyT5tt22x05ieFoy1lfIks9HQmZZRnsYxFSZfD4OGsyXUf7JENooLbiNjPNEC4YfLNvgyl7CAJrxfpMQIwdVt8Rso1EF0Jr7327/6tT6Stx1q+K/IhF+fjyUkr+73HyQ91rO35GN9PyHohpr1VdWH5ksXSr3v34pgIDZsnvFUbvlYAKUt3NIAA2wtp7ToulLFDjAX2r9lQmZDjOZb7UdWcnrdp85yhNFhXjBfEp2Fn88FaqSI6714PjXHaB9Vl0cf2RmoiHHKi2vbgrx0p4Q=
   app: thawing-dusk-24038
