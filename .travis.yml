@@ -8,5 +8,5 @@ env:
 deploy:
   provider: heroku
   api_key:
-    secure: "bf2965cc-cb9c-4a81-b44d-0c024eb8d012"
+    secure: "83285b7e-cabd-41fc-b9fd-e7cac5de303a"
   app: thawing-dusk-24038
