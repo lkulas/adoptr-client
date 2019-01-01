@@ -1,8 +1,5 @@
 .checkbox input {
 	margin-bottom: 20px;
-	margin-left: 20px;
-}
-
-.checkbox label {
-	margin-left: 5px;
+	margin-left: 0;
+	margin-right: 5px;
 }

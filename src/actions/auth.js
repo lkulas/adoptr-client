@@ -63,7 +63,7 @@ export const login = (username, password) => dispatch => {
             .catch(err => {
                 const {code} = err;
                 const message =
-                    code === 401
+                    code === 401 
                         ? 'Incorrect username or password'
                         : 'Unable to login, please try again';
                 dispatch(authError(err));

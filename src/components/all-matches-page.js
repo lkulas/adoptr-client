@@ -3,8 +3,6 @@ import {connect} from 'react-redux';
 import Nav from './nav';
 import SavedMatchCard from './saved-match-card';
 
-import './all-matches-page.css';
-
 export function AllMatchesPage(props) {
 	const savedMatches = props.savedMatches.map((match, index) => (
 		<div key={index} className="col-3">

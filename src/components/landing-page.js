@@ -1,11 +1,16 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {Redirect} from 'react-router-dom';
 
 import LoginSection from './login-section';
 import HeroSection from './hero-section';
 import InfoSection from './info-section';
 import SignupSection from './signup-section';
 
-export default function LandingPage(props) {
+export function LandingPage(props) {
+	if (props.loggedIn) {
+		return <Redirect to="/profile" />;
+	}
 	return (
 		<div>
 			<LoginSection />
@@ -17,3 +22,9 @@ export default function LandingPage(props) {
 		</div>
 	);
 }
+
+const mapStateToProps = state => ({
+	loggedIn: state.auth.currentUser !== null
+});
+
+export default connect(mapStateToProps)(LandingPage);
