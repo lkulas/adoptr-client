@@ -8,13 +8,13 @@ export default function MatchPage(props) {
 		<div>
 			<Nav />
 			<main role="main">
-				<div class="row">
-					<div class="col-4">
+				<div className="row">
+					<div className="col-4">
 					</div>
-					<div class="col-4">
+					<div className="col-4">
 						<MatchCard />
 					</div>
-					<div class="col-4">
+					<div className="col-4">
 					</div>
 				</div>
 				<Rating />
