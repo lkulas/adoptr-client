@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Nav from './nav';
-import {normalizeSize, normalizeHealth, normalizeGender} from '../normalizeTargets';
 import './detail-page.css';
 
 export function DetailPage(props) {
@@ -23,7 +22,7 @@ export function DetailPage(props) {
 
 	const health = options.map((pet, index) => {
 		return (
-			<li key={index}>{normalizeHealth(pet)}</li>
+			<li key={index}>{pet}</li>
 		);
 	});
 
@@ -43,8 +42,8 @@ export function DetailPage(props) {
 					</p>
 					<p>
 						<span className="age">{age}</span> •
-						<span className="gender"> {normalizeGender(sex)}</span> •
-						<span className="size"> {normalizeSize(size)}</span>
+						<span className="gender"> {sex}</span> •
+						<span className="size"> {size}</span>
 					</p>
 					<h2>About</h2>
 						<ul>

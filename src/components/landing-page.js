@@ -9,7 +9,7 @@ import SignupSection from './signup-section';
 
 export function LandingPage(props) {
 	if (props.loggedIn) {
-		return <Redirect to="/profile" />;
+		return <Redirect to="/match" />;
 	}
 	return (
 		<div>

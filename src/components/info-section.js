@@ -6,15 +6,9 @@ export default function InfoSection(props) {
 		<div className="info-section">
 			<section>
 				<header>
-					<h3>Set your preferences</h3>
+					<h3>View rescues and save your favorites</h3>
 				</header>
-				<p>*Screenshot of profile page*</p>
-			</section>
-			<section>
-				<header>
-					<h3>View potential matches and save your favorites</h3>
-				</header>
-				<p>*Screenshot of match*</p>
+				<p>*Screenshot of rescue*</p>
 			</section>
 			<section>
 				<header>

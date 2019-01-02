@@ -6,7 +6,6 @@ import {refreshAuthToken} from '../actions/auth';
 import LandingPage from './landing-page';
 import MatchPage from './match-page';
 import AllMatchesPage from './all-matches-page';
-import ProfilePage from './profile-page';
 import DetailPage from './detail-page';
 import Footer from './footer';
 
@@ -53,10 +52,6 @@ export class App extends React.Component {
 					<Route 
 						exact path="/all-matches"
 						component={AllMatchesPage} 
-					/>
-					<Route 
-						exact path="/profile"
-						component={ProfilePage} 
 					/>
 					<Route 
 						exact path="/detail/:detailId"

@@ -7,7 +7,7 @@ export default function HeroSection(props) {
 		<div className="hero-section">
 			<header role="banner">
 				<h1>Adoptr</h1>
-				<h2>Get matched with rescue pets in your area.</h2>
+				<h2>Find rescue pets</h2>
 			</header>
 		</div>
 	);
