@@ -1,6 +1,5 @@
 import React from 'react';
 import MatchCard from './match-card';
-import Rating from './rating';
 import Nav from './nav';
 
 export default function MatchPage(props) {
@@ -9,15 +8,10 @@ export default function MatchPage(props) {
 			<Nav />
 			<main role="main">
 				<div className="row">
-					<div className="col-4">
-					</div>
-					<div className="col-4">
+					<div className="col-12">
 						<MatchCard />
 					</div>
-					<div className="col-4">
-					</div>
 				</div>
-				<Rating />
 			</main>
 		</div>
 	);

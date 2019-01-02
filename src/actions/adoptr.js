@@ -38,6 +38,18 @@ export const deleteAdoptrError = error => ({
     error
 });
 
+export const UPDATE_CURRENT_PET_SUCCESS = 'UPDATE_CURRENT_PET_SUCCESS';
+export const updateCurrentPetSuccess = data => ({
+    type: UPDATE_CURRENT_PET_SUCCESS,
+    data
+});
+
+export const UPDATE_CURRENT_PET_ERROR = 'UPDATE_CURRENT_PET_ERROR';
+export const updateCurrentPetError = error => ({
+    type: UPDATE_CURRENT_PET_ERROR,
+    error
+});
+
 export const getAdoptr = () => (dispatch, getState) => {
     const username = getState().auth.currentUser.username;
     const authToken = getState().auth.authToken;
@@ -83,4 +95,8 @@ export const deleteAdoptr = (id) => (dispatch, getState) => {
     .then(res => res.json())
     .then(data => dispatch(deleteAdoptrSuccess(data)))
     .catch(err => dispatch(deleteAdoptrError(err)));
+}
+
+export const updateCurrentPet = (pet) => (dispatch, getState) => {
+    dispatch(updateCurrentPetSuccess(pet));
 }

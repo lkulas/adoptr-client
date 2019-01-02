@@ -5,12 +5,10 @@
 
 .card {
   border: 2px solid black;
-  width: 100%;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 75px;
+  width: 500px;
+  margin-top: 50px;
   background: white;
-  padding-bottom: 15px;
+  padding: 10px;
   display: inline-block;
   min-height: 400px;
 }
@@ -24,17 +22,17 @@
 
 .card li {
   font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .photo {
   overflow: hidden;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   padding-left: auto;
   padding-right: auto;
 }
 
 .card h1 {
   margin-bottom: 10px;
-  font-size: 32px;
 }
