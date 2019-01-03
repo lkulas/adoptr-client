@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Nav from './nav';
-import './detail-page.css';
 
 export function DetailPage(props) {
 	const {params} = props.match;

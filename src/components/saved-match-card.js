@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import './match-card.css';
-
 export default function SavedMatchCard(props) {
 	const {photo, name, sex, age, breeds, id} = props.match;
 	const idUrl = `/detail/${id}`;

@@ -1,24 +1,36 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './nav.css';
+import {clearAuth} from '../actions/auth';
+import {clearAuthToken} from '../local-storage';
+import store from '../store';
 
-export default function Nav(props) {
-	return (
-		<nav>
-			<ul>
-				<li>
-					<Link to="/match">Find A Pet</Link>
-				</li>
-				<li>
-					<Link to="/">Logout</Link>
-				</li>
-				<li>
-					<Link to="/profile">Profile</Link>
-				</li>
-				<li>
-					<Link to="/all-matches">Saved Matches</Link>
-				</li>
-			</ul>
-		</nav>
-	);
+export default class Nav extends React.Component {
+	logOut() {
+		return store.dispatch(clearAuth())
+		.then(clearAuthToken())
+		.catch(err => console.log(err));
+	}
+
+	render() {
+		return (
+			<nav>
+				<ul>
+					<li>
+						<Link to="/match">Find A Pet</Link>
+					</li>
+					<li>
+						<Link 
+						to="/"
+						onClick={this.logOut}
+						>
+							Logout
+						</Link>
+					</li>
+					<li>
+						<Link to="/all-matches">Saved Matches</Link>
+					</li>
+				</ul>
+			</nav>
+		);
+	}
 }

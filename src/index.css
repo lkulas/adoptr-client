@@ -1,22 +1,193 @@
 * {
   box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+main {
+  background: #FBFBFB;
+}
+
+input {
+  background: white;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  width: 100px;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
   text-align: center;
   font-size: 1em;
-  padding-top: 5px;
+  line-height: 1.25;
 }
 
 footer {
-	background: lightgrey;
+	background: #204D72;
+  font-family: 'Quicksand', sans-serif;
 	padding: 15px;
-	margin-top: 25px;
+  font-size: 0.75em;
+  color: white;
+}
+
+.logo-font {
+  font-family: 'Righteous', cursive;
+  letter-spacing: 0.25em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.small {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.registration-form label {
+  display: inline;
+}
+
+nav li {
+  font-size: 16px;
+  display: inline-block;
+  margin-right: 30px; 
+}
+
+nav {
+  background: #308870;
+  left: 0;
+  padding: 10px 30px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+nav ul li {
+  float: right;
+}
+
+nav ul li:first-child {
+  float: left;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: black;
+}
+
+.card {
+  border: 1px solid lightgrey;
+  border-radius: 10%;
+  width: 500px;
+  margin-top: 50px;
+  background: white;
+  padding: 10px;
+  display: inline-block;
+  min-height: 400px;
+  margin-bottom: 25px;
+}
+
+.signup-section {
+  padding: 25px 0;
+}
+
+.blue {
+  color: #204D72;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.card li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.info-section {
+  background-image: linear-gradient(to bottom right, #308870, #527B9D);
+  color: white;
+}
+
+.icon {
+  height: 40px;
+  margin: 5px 10px;
+  cursor: pointer;
+}
+
+.photo {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.info-section section {
+  padding: 50px;
+}
+
+.login-section {
+  background: none;
+  padding: 10px 30px;
+}
+
+button {
+  border: 1px solid black;
+  background: none;
+  padding: 10px;
+}
+
+.login-section button {
+  margin-top: 15px;
+  float: right;
+  border: 1px solid white;
+  background: none;
+  padding: 10px;
+  color: white;
+}
+
+.login-form {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding: 20px;
+  text-align: right;
+  font-size: 16px;
+}
+
+.hero-section header {
+  padding: 150px 0;
+  text-align: left;
+}
+
+.hero-section {
+  background-attachment: fixed;
+  background-image: url("images/french-bulldog-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
 
 h1 {
 	font-size: 3em;
+  margin-bottom: 10px;
 }
 
 h2 {
@@ -29,6 +200,24 @@ h3 {
 
 header {
 	margin-bottom: 15px;
+}
+
+.all-matches {
+  padding: 100px 0;
+}
+
+.detail-page img {
+  width: 350px;
+  padding: 10px;
+}
+
+.detail-page main {
+  margin-top: 40px;
+}
+
+.detail-page h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .col-6, 

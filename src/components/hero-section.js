@@ -1,13 +1,13 @@
 import React from 'react';
-
-import './hero-section.css';
+import LoginSection from './login-section';
 
 export default function HeroSection(props) {
 	return (
-		<div className="hero-section">
+		<div className="hero-section row">
+			<LoginSection />
 			<header role="banner">
-				<h1>Adoptr</h1>
-				<h2>Find rescue pets</h2>
+				<h1><span className="logo-font">Adoptr</span></h1>
+				<h2>Find your next best friend</h2>
 			</header>
 		</div>
 	);

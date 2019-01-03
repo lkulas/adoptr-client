@@ -27,8 +27,9 @@ export default function App(props) {
 					exact path="/detail/:detailId"
 					component={DetailPage} 
 				/>
-				<Footer />
+				
 			</Switch>
+			<Footer />
 		</div>
 	);
 }

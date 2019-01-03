@@ -38,7 +38,7 @@ const initialState = {
 export default function reducer(state = initialState, action) {
     if (action.type === GET_ADOPTR_SUCCESS) {
         return Object.assign({}, state, {
-            data: action.data,
+            savedPets: action.savedPets,
             error: null
         });
     } else if (action.type === GET_ADOPTR_ERROR) {
@@ -47,16 +47,17 @@ export default function reducer(state = initialState, action) {
         });
     } else if (action.type === POST_ADOPTR_SUCCESS) {
         return Object.assign({}, state, {
-            data: action.data,
+            savedPets: action.savedPets,
             error: null
-        });
+        })
+        .then(window.location.reload(true));
     } else if (action.type === POST_ADOPTR_ERROR) {
         return Object.assign({}, state, {
             error: action.error
         });
     } else if (action.type === DELETE_ADOPTR_SUCCESS) {
         return Object.assign({}, state, {
-            data: action.data,
+            savedPets: action.savedPets,
             error: null
         });
     } else if (action.type === DELETE_ADOPTR_ERROR) {

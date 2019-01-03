@@ -51,7 +51,7 @@ export const updateCurrentPetError = error => ({
 });
 
 export const getAdoptr = () => (dispatch, getState) => {
-    const username = getState().auth.currentUser.username;
+    const username = localStorage.getItem('username');
     const authToken = getState().auth.authToken;
     return fetch(`${API_BASE_URL}/adoptr/${username}`, {
         method: 'GET',

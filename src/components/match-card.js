@@ -1,11 +1,12 @@
 import React from 'react';
 import {PETFINDER_API_KEY} from '../config';
 import {connect} from 'react-redux';
-import './match-card.css';
 import $ from 'jquery';
 import {normalizeGenderResponse, normalizeSizeResponse} from '../normalizeResponses';
 import {postAdoptr, updateCurrentPet} from '../actions/adoptr';
 import store from '../store';
+const xIcon = require('../images/x-icon.png');
+const heartIcon = require('../images/heart-icon.png');
 
 export class MatchCard extends React.Component {
 
@@ -18,32 +19,24 @@ export class MatchCard extends React.Component {
   	return (
   		<div className="card">
 				<img alt="" src={this.props.pet.photo} className="photo" />
-				<h1 className="name">{this.props.pet.name}</h1>
+				<h1 className="name blue bold">{this.props.pet.name}</h1>
 				<h2 className="breed">{this.props.pet.breed}</h2>
 				<ul>
 					<li>
-						<span className="animal">{this.props.pet.animal}</span>
+						<span className="blue bold">Age: </span><span className="age">{this.props.pet.age}</span>
 					</li>
 					<li>
-						<span className="age">Age: {this.props.pet.age}</span>
+						<span className="blue bold">Gender: </span><span className="gender">{this.props.pet.sex}</span>
 					</li>
 					<li>
-						<span className="gender">Gender: {this.props.pet.sex}</span>
-					</li>
-					<li>
-						<span className="size">Size: {this.props.pet.size}</span>
+						<span className="blue bold">Size: </span><span className="size">{this.props.pet.size}</span>
 					</li>
 				</ul>
 				<div className="rating">
 					<a href="/match">
-						<button type="button" id="x-btn">X</button>
+						<img src={xIcon} className="icon" alt="X icon, click to delete"/>
 					</a>
-					<button 
-						type="button" 
-						id="heart-btn"
-						onClick={this.onSubmit}>
-						Heart
-					</button>
+					<img src={heartIcon} className="icon" alt="Heart icon, click to save" onClick={this.onSubmit}/>
 				</div>
 			</div>
   	);

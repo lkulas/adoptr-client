@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 
-import LoginSection from './login-section';
 import HeroSection from './hero-section';
 import InfoSection from './info-section';
 import SignupSection from './signup-section';
@@ -13,7 +12,6 @@ export function LandingPage(props) {
 	}
 	return (
 		<div>
-			<LoginSection />
 			<main role="main">
 				<HeroSection />
 				<InfoSection />

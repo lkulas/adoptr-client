@@ -1,7 +1,6 @@
 import React from 'react';
 
 import LoginForm from './login-form';
-import './login-section.css';
 
 export default class LoginSection extends React.Component {
 	constructor() {
