@@ -27,7 +27,7 @@ export class LoginForm extends React.Component {
                 )}>
                 {error}
                 <div>
-                    <p class="small">Login for demo with <br />username and password 'demo'</p>
+                    <p className="small">Login for demo with <br />username and password 'demo'</p>
                 </div>
                 <label htmlFor="username">Username</label>
                 <Field
