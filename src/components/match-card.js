@@ -50,7 +50,7 @@ export class MatchCard extends React.Component {
 	  		const newCurrentPet = {
 	  			username: localStorage.getItem('username'),
   				animal: pet.animal.$t || null,
-  				photo: pet.media.photos.photo[2].$t || null,
+  				photo: pet.media.photos.photo[3].$t || null,
   				name: pet.name.$t || null,
   				age: pet.age.$t || null,
   				sex: normalizeGenderResponse(pet.sex.$t) || null,
