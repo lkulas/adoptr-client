@@ -5,6 +5,8 @@
 
 main {
   background: #FBFBFB;
+  padding-bottom: 25px;
+  min-height: 100%;
 }
 
 input {
@@ -14,10 +16,19 @@ input {
   width: 100px;
 }
 
+.content {
+  min-height: calc(100vh - 50px);
+}
+
+.footer {
+  height: 50px;
+}
+
 body {
   text-align: center;
   font-size: 1em;
   line-height: 1.25;
+  background: #FBFBFB;
 }
 
 footer {
@@ -26,6 +37,7 @@ footer {
 	padding: 15px;
   font-size: 0.75em;
   color: white;
+  width: 100%;
 }
 
 .logo-font {
@@ -39,11 +51,16 @@ nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .small {
   font-size: 14px;
   margin-bottom: 5px;
+}
+
+.medium {
+  font-size: 24px;
 }
 
 .registration-form label {
@@ -56,23 +73,14 @@ nav li {
   margin-right: 30px; 
 }
 
+
 nav {
   background: #308870;
-  left: 0;
+  width: 100%;
   padding: 10px 30px;
-  position: fixed;
-  right: 0;
-  top: 0;
   font-family: 'Quicksand', sans-serif;
 }
 
-nav ul li {
-  float: right;
-}
-
-nav ul li:first-child {
-  float: left;
-}
 
 a {
   text-decoration: none;
@@ -86,13 +94,12 @@ a:hover {
 .card {
   border: 1px solid lightgrey;
   border-radius: 10%;
+  margin-top: 20px;
   width: 500px;
-  margin-top: 50px;
   background: white;
-  padding: 10px;
+  padding: 20px;
   display: inline-block;
   min-height: 400px;
-  margin-bottom: 25px;
 }
 
 .signup-section {
@@ -136,6 +143,10 @@ a:hover {
   height: 200px;
   padding-left: auto;
   padding-right: auto;
+}
+
+.white {
+  color: white;
 }
 
 .info-section section {

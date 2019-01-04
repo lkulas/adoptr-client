@@ -14,9 +14,13 @@ export default class Nav extends React.Component {
 	render() {
 		return (
 			<nav>
+			<h1 className="logo-font white medium">Adoptr</h1>
 				<ul>
 					<li>
-						<Link to="/match">Find A Pet</Link>
+						<Link to="/match">Find A Dog</Link>
+					</li>
+					<li>
+						<Link to="/all-matches">Saved Matches</Link>
 					</li>
 					<li>
 						<Link 
@@ -25,9 +29,6 @@ export default class Nav extends React.Component {
 						>
 							Logout
 						</Link>
-					</li>
-					<li>
-						<Link to="/all-matches">Saved Matches</Link>
 					</li>
 				</ul>
 			</nav>
