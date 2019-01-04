@@ -160,6 +160,7 @@ button {
   background: none;
   padding: 10px;
   color: white;
+  font-size: 16px;
 }
 
 .login-form {
@@ -172,8 +173,9 @@ button {
 }
 
 .hero-section header {
-  padding: 150px 0;
+  padding: 150px 0 150px 100px;
   text-align: left;
+
 }
 
 .hero-section {

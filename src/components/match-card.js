@@ -43,7 +43,7 @@ export class MatchCard extends React.Component {
   }
 
   componentDidMount() {
-		$.getJSON(`http://api.petfinder.com/pet.getRandom?key=${PETFINDER_API_KEY}&format=json&output=full&callback=?`)
+		$.getJSON(`https://api.petfinder.com/pet.getRandom?key=${PETFINDER_API_KEY}&format=json&output=full&callback=?`)
 	  	.then(data => {
 	  		const pet = data.petfinder.pet;
 	  		console.log(pet);
