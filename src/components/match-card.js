@@ -17,26 +17,28 @@ export class MatchCard extends React.Component {
 
   render() {
   	return (
-  		<div className="card">
-				<img alt="" src={this.props.pet.photo} className="photo" />
-				<h1 className="name blue bold">{this.props.pet.name}</h1>
-				<h2 className="breed">{this.props.pet.breed}</h2>
-				<ul>
-					<li>
-						<span className="blue bold">Age: </span><span className="age">{this.props.pet.age}</span>
-					</li>
-					<li>
-						<span className="blue bold">Gender: </span><span className="gender">{this.props.pet.sex}</span>
-					</li>
-					<li>
-						<span className="blue bold">Size: </span><span className="size">{this.props.pet.size}</span>
-					</li>
-				</ul>
-				<div className="rating">
-					<a href="/match">
-						<img src={xIcon} className="icon" alt="X icon, click to delete"/>
-					</a>
-					<img src={heartIcon} className="icon" alt="Heart icon, click to save" onClick={this.onSubmit}/>
+  		<div className="row center">
+	  		<div className="card col-12">
+					<img alt="" src={this.props.pet.photo} className="photo" />
+					<h1 className="name blue bold">{this.props.pet.name}</h1>
+					<h2 className="breed">{this.props.pet.breed}</h2>
+					<ul>
+						<li>
+							<span className="blue bold">Age: </span><span className="age">{this.props.pet.age}</span>
+						</li>
+						<li>
+							<span className="blue bold">Gender: </span><span className="gender">{this.props.pet.sex}</span>
+						</li>
+						<li>
+							<span className="blue bold">Size: </span><span className="size">{this.props.pet.size}</span>
+						</li>
+					</ul>
+					<div className="rating">
+						<a href="/match">
+							<img src={xIcon} className="icon" alt="X icon, click to delete"/>
+						</a>
+						<img src={heartIcon} className="icon" alt="Heart icon, click to save" onClick={this.onSubmit}/>
+					</div>
 				</div>
 			</div>
   	);

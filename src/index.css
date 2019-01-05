@@ -104,7 +104,6 @@ nav ul {
   margin-top: 20px;
   min-height: 400px;
   padding: 20px;
-  width: 500px;
 }
 
 .card li {
@@ -150,15 +149,14 @@ nav ul {
 .hero-section {
   background-attachment: fixed;
   background-image: url("images/french-bulldog-2.jpg");
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
 }
 
 .hero-section header {
-  padding: 150px 0 150px 100px;
-  text-align: left;
+  padding: 300px 0 150px 0;
 }
 
 .icon {
@@ -255,16 +253,33 @@ nav ul {
 }
 
 @media only screen and (min-width: 640px) {
-  .col-6 {
-    width: 50%;
-  }
-  .col-4 {
-    width: 33%;
+  .card {
+    max-width: 500px;
+    min-height: 400px;
+    padding: 20px;
   }
   .col-3 {
     width: 25%;
   }
+  .col-4 {
+    width: 33%;
+  }
+  .col-6 {
+    width: 50%;
+  }
   .col-12 {
     width: 100%;
+  }
+  .hero-section {
+    background-position: center;
+    background-size: cover;
+  }
+  .hero-section header {
+    padding: 150px 0 150px 100px;
+    text-align: left;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
   }
 }

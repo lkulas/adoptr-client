@@ -7,11 +7,7 @@ export default function MatchPage(props) {
 		<div>
 			<Nav />
 			<main>
-				<div className="row">
-					<div className="col-12">
-						<MatchCard />
-					</div>
-				</div>
+				<MatchCard />
 			</main>
 		</div>
 	);
