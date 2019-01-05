@@ -46,7 +46,6 @@ export class MatchCard extends React.Component {
 		$.getJSON(`https://api.petfinder.com/pet.getRandom?key=${PETFINDER_API_KEY}&format=json&animal=dog&output=full&callback=?`)
 	  	.then(data => {
 	  		const pet = data.petfinder.pet;
-	  		console.log(pet);
 	  		const newCurrentPet = {
 	  			username: localStorage.getItem('username'),
   				animal: pet.animal.$t || null,

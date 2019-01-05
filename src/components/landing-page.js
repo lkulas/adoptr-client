@@ -12,7 +12,7 @@ export function LandingPage(props) {
 	}
 	return (
 		<div>
-			<main role="main">
+			<main>
 				<HeroSection />
 				<InfoSection />
 				<SignupSection />

@@ -14,7 +14,9 @@ export default class Nav extends React.Component {
 	render() {
 		return (
 			<nav>
-			<h1 className="logo-font white medium">Adoptr</h1>
+			<Link to="/">
+				<h1 className="logo-font white medium">Adoptr</h1>
+			</Link>
 				<ul>
 					<li>
 						<Link to="/match">Find A Dog</Link>
