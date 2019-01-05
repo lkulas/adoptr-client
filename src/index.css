@@ -215,8 +215,8 @@ header {
 	margin-bottom: 15px;
 }
 
-.all-matches {
-  padding: 100px 0;
+.all-matches main {
+  padding-top: 50px;
 }
 
 .detail-page img {
