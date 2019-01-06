@@ -16,21 +16,22 @@ export class MatchCard extends React.Component {
 	}
 
   render() {
+  	const {photo, name, breed, age, size, sex} = this.props.pet;
   	return (
   		<div className="row center">
 	  		<div className="card col-12">
-					<img alt="" src={this.props.pet.photo} className="photo" />
-					<h1 className="name blue bold">{this.props.pet.name}</h1>
-					<h2 className="breed">{this.props.pet.breed}</h2>
+					<img alt="dog" src={photo} className="photo" />
+					<h1 className="name blue bold">{name}</h1>
+					<h2 className="breed">{breed}</h2>
 					<ul>
 						<li>
-							<span className="blue bold">Age: </span><span className="age">{this.props.pet.age}</span>
+							<span className="blue bold">Age: </span><span className="age">{age}</span>
 						</li>
 						<li>
-							<span className="blue bold">Gender: </span><span className="gender">{this.props.pet.sex}</span>
+							<span className="blue bold">Gender: </span><span className="gender">{sex}</span>
 						</li>
 						<li>
-							<span className="blue bold">Size: </span><span className="size">{this.props.pet.size}</span>
+							<span className="blue bold">Size: </span><span className="size">{size}</span>
 						</li>
 					</ul>
 					<div className="rating">
