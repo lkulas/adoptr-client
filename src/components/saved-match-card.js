@@ -1,5 +1,6 @@
 import React from 'react';
 import store from '../store';
+import {Link} from 'react-router-dom';
 import {deleteAdoptr} from '../actions/adoptr';
 const xIcon = require('../images/x-icon.png');
 
@@ -12,10 +13,13 @@ export default class SavedMatchCard extends React.Component {
 
 	render() {
 		const {photo, name, sex, size, age, breed, id} = this.props.match;
+		const idUrl = `/detail/${id}`;
 		return (
 			<div className="card">
+			<Link to={idUrl}>
 				<img alt="dog" src={photo} className="photo" />
 				<h1 className="name blue bold">{name}</h1>
+			</Link>
 				<h2 className="breed">{breed}</h2>
 				<ul>
 					<li>

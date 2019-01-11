@@ -1,72 +1,84 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Nav from './nav';
+import store from '../store';
+import {getAdoptr} from '../actions/adoptr';
 
-export function DetailPage(props) {
-	const {params} = props.match;
-	const targetPet = props.savedMatches.find(function(element) {
-  	return element.id === params.detailId;
-	});
-	const {
-		photo, 
-		name, 
-		sex, 
-		age, 
-		breeds, 
-		contact, 
-		size, 
-		options, 
-		description
-	} = targetPet;
+export class DetailPage extends React.Component {
+	componentDidMount() {
+		this.props.dispatch(getAdoptr());
+	}
 
-	const health = options.map((pet, index) => {
-		return (
-			<li key={index}>{pet}</li>
-		);
-	});
+	render() {
+		if (this.props.savedPets.length === 0) {
+			return (
+				<div className="detail=page">
+					<Nav />
+					<main>
+					</main>
+				</div>
+			);
+		} else {
+			const {params} = this.props.match;
+			console.log(params);
+			console.log(this.props);
+			const targetPet = this.props.savedPets.find(a => a.id === params.detailId);
+			console.log(targetPet);
+			const {
+				photo, 
+				name, 
+				sex, 
+				age, 
+				breed, 
+				city, 
+				state,
+				zip,
+				email,
+				phone,
+				address1,
+				address2,
+				size,  
+				description
+			} = targetPet;
+			return (
+				<div className="detail-page">
+					<Nav />
+					<main role="main">
+						<section>
+							<h1>{name}</h1>
+							<img alt="" src={photo}  />
+							<p>
+								<span className="breed">{breed}</span> • 
+								<span className="city"> {city}</span>,
+								<span className="state"> {state}</span>
+							</p>
+							<p>
+								<span className="age">{age}</span> •
+								<span className="gender"> {sex}</span> •
+								<span className="size"> {size}</span>
+							</p>
+							<h2>Meet {name}</h2>
+								<p>{description}</p>
+							<h2>Shelter</h2>
+								<ul>
+									<li className="shelter-name"> </li>
+									<li className="shelter-address">{address1} {address2}</li>
+									<li className="shelter-city-state">{city}, {state} {zip}</li>
+									<li className="shelter-phone">{phone}</li>
+									<li className="shelter-email">{email}</li>
+								</ul>
+						</section>
+					</main>
 
-	console.log(targetPet);
-
-	return (
-		<div className="detail-page">
-			<Nav />
-			<main role="main">
-				<section>
-					<h1>{name}</h1>
-					<img alt="" src={photo} />
-					<p>
-						<span className="breed">{breeds[0]}</span> • 
-						<span className="city"> {contact.city}</span>,
-						<span className="state"> {contact.state}</span>
-					</p>
-					<p>
-						<span className="age">{age}</span> •
-						<span className="gender"> {sex}</span> •
-						<span className="size"> {size}</span>
-					</p>
-					<h2>About</h2>
-						<ul>
-							{health}
-						</ul>
-					<h2>Meet {name}</h2>
-						<p>{description}</p>
-					<h2>Shelter</h2>
-						<ul>
-							<li className="shelter-name">{contact.name}</li>
-							<li className="shelter-address">{contact.address1} {contact.address2}</li>
-							<li className="shelter-city-state">{contact.city}, {contact.state} {contact.zip}</li>
-							<li className="shelter-phone">{contact.phone}</li>
-							<li className="shelter-email">{contact.email}</li>
-						</ul>
-				</section>
-			</main>
-		</div>
-	);
+				</div>
+			);
+		}
+	}
 }
 
 
 const mapStateToProps = state => ({
-	savedMatches: state.adoptr.savedMatches
+	savedPets: store.getState().adoptr.savedPets
 });
 
-export default connect (mapStateToProps)(DetailPage);
+export default connect(mapStateToProps)(DetailPage);
